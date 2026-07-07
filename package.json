@@ -1,0 +1,24 @@
+{
+  "name": "chemistry-sim",
+  "version": "1.0.0",
+  "description": "Interactive H2 Covalent Bond Chemistry Simulation",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "npx http-server"
+  },
+  "keywords": [
+    "chemistry",
+    "simulation",
+    "h2",
+    "covalent-bond",
+    "electron",
+    "interactive"
+  ],
+  "author": "IMPHUONGANH",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/chemistry-sim.git"
+  }
+}

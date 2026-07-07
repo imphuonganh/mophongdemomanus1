@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H2 Covalent Bond Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>Interactive Chemistry Simulation</h1>
+        </header>
+
+        <main class="content">
+            <div class="simulation-area">
+                <div id="canvas-container"></div>
+                
+                <div class="controls-overlay">
+                    <div class="main-controls">
+                        <button id="playPauseBtn" class="btn btn-play" title="Play/Pause">
+                            <i class="fas fa-play" id="playIcon"></i>
+                            <i class="fas fa-pause" id="pauseIcon" style="display:none;"></i>
+                        </button>
+                        <button id="resetBtn" class="btn btn-reset" title="Reset">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="step-buttons">
+                    <button class="step-btn" data-step="0" title="Giai đoạn 0: Bắt đầu">
+                        <span class="step-label">0%</span>
+                    </button>
+                    <button class="step-btn" data-step="1" title="Giai đoạn 1: Tiến lại gần">
+                        <span class="step-label">25%</span>
+                    </button>
+                    <button class="step-btn" data-step="2" title="Giai đoạn 2: Electron chuyển động">
+                        <span class="step-label">50%</span>
+                    </button>
+                    <button class="step-btn" data-step="3" title="Giai đoạn 3: Hình thành liên kết">
+                        <span class="step-label">75%</span>
+                    </button>
+                    <button class="step-btn" data-step="4" title="Giai đoạn 4: Hoàn thành">
+                        <span class="step-label">100%</span>
+                    </button>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div class="progress-info">Tiến trình: <span id="progressText">0%</span></div>
+                    <input type="range" id="progressSlider" class="progress-slider" min="0" max="100" value="0">
+                </div>
+            </div>
+
+            <aside class="info-panel">
+                <div class="info-card">
+                    <h3>Thông tin mô phỏng</h3>
+                    <div class="info-item">
+                        <strong>Tên:</strong> <span>Liên kết cộng hóa trị H₂</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Số e lớp ngoài:</strong> <span>1 (mỗi nguyên tử)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Nguyên tử:</strong> <span>Hydrogen (H)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Khoảng cách:</strong> <span id="distanceInfo">Rất xa</span>
+                    </div>
+                </div>
+
+                <div class="explanation-card">
+                    <h3>Giải thích khoa học</h3>
+                    <p id="explanationText">Hai nguyên tử Hydrogen đang ở khoảng cách xa, mỗi nguyên tử có 1 electron ở lớp vỏ K.</p>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>IMPHUONGANH 2026 Mô phỏng liên kết cộng hoá trị</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
